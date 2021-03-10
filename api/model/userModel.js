@@ -1,12 +1,11 @@
-const users = [{
-    uuid: "big-UID-Text-1",
-    username: "user1",
-    email: "email1.dal.ca"
-}, {
-    uuid: "big-UID-Text-2",
-    username: "user2",
-    email: "email2.dal.ca"
-}]
+const mongoose = require('mongoose');
 
+const userSchema = mongoose.Schema({
+    email: {
+        type: String,
+        required: true
+    },
+    username: String
+}, { versionKey: false });
 
-module.exports = users;
+module.exports = mongoose.model("users", userSchema);

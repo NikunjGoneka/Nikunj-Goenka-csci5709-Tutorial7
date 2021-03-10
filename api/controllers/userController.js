@@ -1,35 +1,65 @@
-const userData = require('../model/userModel');
+const { response } = require('express');
+const userCollection = require('../model/userModel');
 
-const searchUser = (key, value) => {
-    const match = userData.find(userData => {
-        return userData[key] === value;
-    })
-    if (!match) {
-        throw new Error("No User Found");
-    }
-    return match;
-}
-const addUser = (key, userObject) => {
-    const match = userData.find(userData => {
-        return userData[key] === userObject[key];
-    })
-    if (match) {
-        throw new Error("uuid is not unique");
-    }
-    userData.push(userObject);
+const getAllUser = (res) => {
+    userCollection.find()
+        .exec()
+        .then(data => {
+            console.log(data);
+            res.status(200).json(data);
+        })
+        .catch(err => {
+            console.log(err);
+        });
 }
 
-const updateUser = (username, newUsername) => {
+const searchUser = (res, value) => {
+    userCollection.find({ "username": value })
+        .exec()
+        .then(data => {
+            console.log(data);
+            res.status(200).json(data);
+        })
+        .catch(err => {
+            console.log(err);
+        });
+}
 
-    userData.forEach((ele, index) => {
-        if (ele['username'] == username) {
-            ele['username'] = newUsername;
+const addUser = (res, userObject) => {
 
+    userCollection.create(userObject, (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.status(200).json(
+                {
+                    status: 'Success',
+                    info: 'New User Added'
+                }
+            );
         }
     });
 
 }
 
+const updateUser = (res, username, newUsername) => {
+
+    userCollection.updateMany({ "username": username }, { "$set": { "username": newUsername } }, (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.status(200).json(
+                {
+                    status: 'Success',
+                    info: 'Username Updated'
+                }
+            );
+        }
+    });
+
+}
+
+module.exports.getAllUser = getAllUser;
 module.exports.searchUser = searchUser;
 module.exports.addUser = addUser;
 module.exports.updateUser = updateUser;
