@@ -10,16 +10,16 @@
 
 ## URL List To view Backend funtionality
 
-* URL for list of all users (GET method)
+URL for list of all users (GET method)
 
 [a link] https://csci-5709-tutorial7.herokuapp.com/user
 
-* URL for specific user using path parameter (GET Method)
+URL for specific user using path parameter (GET Method)
 
 [a link] https://csci-5709-tutorial7.herokuapp.com/user/specific/user3
 
+URL add new user (POST Method)
 
-* URL add new user (POST Method)
 [a link] https://csci-5709-tutorial7.herokuapp.com/user/addUser
 BODY:
 ````
@@ -27,16 +27,17 @@ BODY:
 "user": {
 	"username": "user6",
 	"email": "email6@dal.ca"
-    			}
-		}
-		````
+    	}
+}
+````
 
-* URL update username (PUT Method)
-	[a link] https://csci-5709-tutorial7.herokuapp.com/user/updateUser
-	BODY:
-		````
-		{
-   			"username": "user6",
-    			"newUsername": "UpdatedUsername-6"
-		}
-		````
+URL update username (PUT Method)
+
+[a link] https://csci-5709-tutorial7.herokuapp.com/user/updateUser
+BODY:
+````
+{
+	"username": "user6",
+	"newUsername": "UpdatedUsername-6"
+}
+````
