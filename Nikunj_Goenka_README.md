@@ -1,9 +1,9 @@
-# Tutorial - 6
+# Tutorial - 7
 
-* Date Created: 06-03-2021
-* Last Modification Date: 06-03-2021
-* Website URL: https://nikunj-goenka-tutorial-6.herokuapp.com
-* Repository URL: https://github.com/NikunjGoneka/goenka_nikunj_csci5709_tutorial6
+* Date Created: 10-03-2021
+* Last Modification Date: 10-03-2021
+* Website URL: [a link] https://csci-5709-tutorial7.herokuapp.com/user
+* Repository URL:[a link] https://github.com/NikunjGoneka/goenka_nikunj_csci5709_tutorial6
 
 ## Authors
 * [Nikunj Goenka](Nikunj.Goenka@dal.ca)
@@ -11,31 +11,30 @@
 ## URL List To view Backend funtionality
 
 * URL for list of all users (GET method)
-	https://nikunj-goenka-tutorial-6.herokuapp.com/user/
+	[a link] https://csci-5709-tutorial7.herokuapp.com/user
 
 * URL for specific user using path parameter (GET Method)
-	https://nikunj-goenka-tutorial-6.herokuapp.com/user/specific/user2
+	[a link] https://csci-5709-tutorial7.herokuapp.com/user/specific/user3
 
-* URL for specific user using body (GET Method)
-	https://nikunj-goenka-tutorial-6.herokuapp.com/user/specific
-	BODY:
-		{
-    			"username": "user2"
-		}
-		
+
 * URL add new user (POST Method)
-	https://nikunj-goenka-tutorial-6.herokuapp.com/user/addUser
+	[a link] https://csci-5709-tutorial7.herokuapp.com/user/addUser
 	BODY:
+		````
 		{
-   			"uuid": "SOME UNIQUE ID",
-    			"username": "user3",
-    			"email": "email3.dal.ca"
+    			"user": {
+        			"username": "user6",
+        			"email": "email6@dal.ca"
+    			}
 		}
+		````
 
 * URL update username (PUT Method)
-	https://nikunj-goenka-tutorial-6.herokuapp.com/user/updateUser
+	[a link] https://csci-5709-tutorial7.herokuapp.com/user/updateUser
 	BODY:
+		````
 		{
-   			"username": "user2",
-    			"newUsername": "user3"
+   			"username": "user6",
+    			"newUsername": "UpdatedUsername-6"
 		}
+		````
