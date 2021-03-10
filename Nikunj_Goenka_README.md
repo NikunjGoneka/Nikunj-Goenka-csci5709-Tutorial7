@@ -2,8 +2,8 @@
 
 * Date Created: 10-03-2021
 * Last Modification Date: 10-03-2021
-* Website URL: [a link] https://csci-5709-tutorial7.herokuapp.com/user
-* Repository URL:[a link] https://github.com/NikunjGoneka/goenka_nikunj_csci5709_tutorial6
+* Website URL: https://csci-5709-tutorial7.herokuapp.com/user
+* Repository URL: https://github.com/NikunjGoneka/Name-LName-csci5709-Tutorial7.git
 
 ## Authors
 * [Nikunj Goenka](Nikunj.Goenka@dal.ca)
