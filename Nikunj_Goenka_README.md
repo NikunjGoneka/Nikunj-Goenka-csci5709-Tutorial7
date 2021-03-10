@@ -11,21 +11,22 @@
 ## URL List To view Backend funtionality
 
 * URL for list of all users (GET method)
-*
-* [a link] https://csci-5709-tutorial7.herokuapp.com/user
+
+[a link] https://csci-5709-tutorial7.herokuapp.com/user
 
 * URL for specific user using path parameter (GET Method)
-	[a link] https://csci-5709-tutorial7.herokuapp.com/user/specific/user3
+
+[a link] https://csci-5709-tutorial7.herokuapp.com/user/specific/user3
 
 
 * URL add new user (POST Method)
-	[a link] https://csci-5709-tutorial7.herokuapp.com/user/addUser
-	BODY:
-		````
-		{
-    			"user": {
-        			"username": "user6",
-        			"email": "email6@dal.ca"
+[a link] https://csci-5709-tutorial7.herokuapp.com/user/addUser
+BODY:
+````
+{
+"user": {
+	"username": "user6",
+	"email": "email6@dal.ca"
     			}
 		}
 		````
