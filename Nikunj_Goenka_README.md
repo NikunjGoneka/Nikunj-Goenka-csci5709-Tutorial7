@@ -11,7 +11,8 @@
 ## URL List To view Backend funtionality
 
 * URL for list of all users (GET method)
-	[a link] https://csci-5709-tutorial7.herokuapp.com/user
+*
+* [a link] https://csci-5709-tutorial7.herokuapp.com/user
 
 * URL for specific user using path parameter (GET Method)
 	[a link] https://csci-5709-tutorial7.herokuapp.com/user/specific/user3
